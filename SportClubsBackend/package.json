@@ -1,0 +1,23 @@
+{
+  "name": "sportclubs",
+  "version": "1.0.0",
+  "description": "Sport Clubs Database and Tournament Management",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sport",
+    "clubs",
+    "tournament",
+    "database"
+  ],
+  "author": "Vladimir Feldman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

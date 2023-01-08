@@ -1,2 +1,2 @@
 # sportclubs
-Sports clubs management software (educational project)
+Sports clubs management software
