@@ -1,0 +1,1 @@
+export const loginService = async (user: String, password: String) => {return 'Login service called'}
