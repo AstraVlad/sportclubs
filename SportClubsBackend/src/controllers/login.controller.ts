@@ -1,7 +1,9 @@
-import { loginService } from "../services/login.service";
-import {NextFunction, Request, Response} from 'express';
+import passport from "../services/login.service";
+//import {NextFunction, Request, Response} from 'express';
 
-export const loginController = async (req: Request, res: Response, next: NextFunction) => {
+export const loginController = passport
+
+/* export const loginController = async (req: Request, res: Response, next: NextFunction) => {
   try {
     if (req.body) {
       console.log(req.body)
@@ -19,4 +21,4 @@ export const loginController = async (req: Request, res: Response, next: NextFun
     console.log(e.message)
     res.sendStatus(500) && next(e)
   }
-}
+}*/
