@@ -3,11 +3,17 @@ import {NextFunction, Request, Response} from 'express';
 
 export const loginController = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const result = await loginService('test', 'test')
+    if (req.body) {
+      console.log(req.body)
+      const username = req.body.username || 'test';
+      const password = req.body.password || 'test';
+      const result = await loginService(username, password)
+      res.send(result)
+    } else {
+      res.send('No credentials provided')
+    }
     // other service call (or same service, different function can go here)
-    // i.e. - await generateBlogpostPreview()
     //res.sendStatus(201)
-    res.send(result)
     next()
   } catch(e: any) {
     console.log(e.message)
