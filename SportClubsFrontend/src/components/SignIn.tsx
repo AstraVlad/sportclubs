@@ -33,15 +33,13 @@ const sxForgotLinkTypography = {
 const sxTitleTypography = { letterSpacing: 0.25, fontSize: 34 };
 
 export default function SignIn() {
-  
-
   return (
     <Container component="main" maxWidth="xs">
       <Box sx={sxBoxOne}>
         <Typography component="h1" variant="h5" sx={sxTitleTypography}>
           Sign In
         </Typography>
-        <Box component="form"  noValidate>
+        <Box component="form" noValidate>
           <TextField
             size="small"
             margin="normal"

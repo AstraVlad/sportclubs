@@ -4,8 +4,9 @@ import {
   Box,
   Typography,
   Container,
-  Link,
 } from '@mui/material';
+
+import CommonLink from './MainLink';
 
 const sxTitleTypography = {
   letterSpacing: 0.25,
@@ -13,7 +14,12 @@ const sxTitleTypography = {
   fontWeight: 500,
   mt: 1,
 };
-const sxSubtitleTypography = { fontWeight: 500, fontSize: 16, mb: 2, mt: 2 };
+const sxSubtitleTypography = { 
+  fontWeight: 500,
+  fontSize: 16,
+  mb: 2, 
+  mt: 2
+};
 const sxBoxOne = {
   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
   padding: '15px',
@@ -28,12 +34,6 @@ const sxSubmitButton = {
   mb: 2,
   background: '#4741DE',
   letterSpacing: 1.25,
-};
-const sxSignInLinkTypography = {
-  fontWeight: 600,
-  fontSize: 14,
-  letterSpacing: 1.25,
-  mb: 1,
 };
 
 export default function ResetForm() {
@@ -64,11 +64,7 @@ export default function ResetForm() {
           >
             send
           </Button>
-          <Link href="/signin" underline="none" color="#4741DE">
-            <Typography variant="body2" sx={sxSignInLinkTypography}>
-              sign in
-            </Typography>
-          </Link>
+          <CommonLink url="/signin"/>
         </Box>
       </Box>
     </Container>
