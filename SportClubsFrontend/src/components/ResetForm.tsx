@@ -7,7 +7,7 @@ import {
   Card
 } from '@mui/material';
 
-import CommonLink from './MainLink';
+import CommonLink from './CommonLink';
 
 const sxTitleTypography = {
   letterSpacing: 0.25,
