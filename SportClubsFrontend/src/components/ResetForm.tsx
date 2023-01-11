@@ -4,6 +4,7 @@ import {
   Box,
   Typography,
   Container,
+  Card
 } from '@mui/material';
 
 import CommonLink from './MainLink';
@@ -25,9 +26,6 @@ const sxBoxOne = {
   padding: '15px',
   borderRadius: 5,
   marginTop: 8,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
 };
 const sxSubmitButton = {
   mt: 3,
@@ -39,7 +37,7 @@ const sxSubmitButton = {
 export default function ResetForm() {
   return (
     <Container component="main" maxWidth="xs">
-      <Box sx={sxBoxOne}>
+      <Card sx={sxBoxOne}>
         <Typography component="h1" variant="h5" sx={sxTitleTypography}>
           Reset password
         </Typography>
@@ -66,7 +64,7 @@ export default function ResetForm() {
           </Button>
           <CommonLink url="/signin"/>
         </Box>
-      </Box>
+      </Card>
     </Container>
   );
 }
