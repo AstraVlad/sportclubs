@@ -24,13 +24,11 @@ const sxSubtitleTypography = {
 const sxBoxOne = {
   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
   padding: '15px',
-  borderRadius: 5,
   marginTop: 8,
 };
 const sxSubmitButton = {
   mt: 3,
   mb: 2,
-  background: '#4741DE',
   letterSpacing: 1.25,
 };
 
@@ -38,7 +36,7 @@ export default function ResetForm() {
   return (
     <Container component="main" maxWidth="xs">
       <Card sx={sxBoxOne}>
-        <Typography component="h1" variant="h5" sx={sxTitleTypography}>
+        <Typography component="h1" variant="h5" sx={sxTitleTypography} >
           Reset password
         </Typography>
         <Box component="form">
