@@ -24,12 +24,23 @@ app.use(session({
 }));
 app.use(passport.authenticate('session'));
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server, v2');
+//Requests to API go here
+app.use('/api', apiRouter);
+
+//Dummy route for testing purposes
+app.get('/success', (req: Request, res: Response) => {
+  res.send('Operation successful!');
 });
 
+//Dummy route for testing purposes
+app.get('/failure', (req: Request, res: Response) => {
+  res.send('Operation failed!');
+});
 
-app.use('/api', apiRouter);
+//Catching all other routes and delivering root payload
+app.get('/*', (req: Request, res: Response) => {
+  res.send('Express + TypeScript Server, v2');
+});
 
 app.listen(port, () => {
   console.log(`[server]: Server made with TS is running at http://localhost:${port}`);
