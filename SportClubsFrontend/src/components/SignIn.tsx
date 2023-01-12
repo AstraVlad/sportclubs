@@ -5,16 +5,13 @@ import {
   Typography,
   Container,
   Link,
+  Card
 } from '@mui/material';
 
-const sxBoxOne = {
+const sxCard = {
   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
   padding: '25px',
-  borderRadius: 5,
   marginTop: 8,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
 };
 
 const sxSubmitButton = {
@@ -35,7 +32,7 @@ const sxTitleTypography = { letterSpacing: 0.25, fontSize: 34 };
 export default function SignIn() {
   return (
     <Container component="main" maxWidth="xs">
-      <Box sx={sxBoxOne}>
+      <Card sx={sxCard}>
         <Typography component="h1" variant="h5" sx={sxTitleTypography}>
           Sign In
         </Typography>
@@ -73,7 +70,7 @@ export default function SignIn() {
             </Typography>
           </Link>
         </Box>
-      </Box>
+      </Card>
     </Container>
   );
 }
