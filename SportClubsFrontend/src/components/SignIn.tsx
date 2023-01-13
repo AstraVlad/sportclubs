@@ -4,17 +4,15 @@ import {
   Box,
   Typography,
   Container,
-  Link,
+  Card
 } from '@mui/material';
 
-const sxBoxOne = {
+import CommonLink from './CommonLink';
+
+const sxCard = {
   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
   padding: '25px',
-  borderRadius: 5,
   marginTop: 8,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
 };
 
 const sxSubmitButton = {
@@ -33,15 +31,13 @@ const sxForgotLinkTypography = {
 const sxTitleTypography = { letterSpacing: 0.25, fontSize: 34 };
 
 export default function SignIn() {
-  
-
   return (
     <Container component="main" maxWidth="xs">
-      <Box sx={sxBoxOne}>
+      <Card sx={sxCard}>
         <Typography component="h1" variant="h5" sx={sxTitleTypography}>
           Sign In
         </Typography>
-        <Box component="form"  noValidate>
+        <Box component="form" noValidate>
           <TextField
             size="small"
             margin="normal"
@@ -69,13 +65,9 @@ export default function SignIn() {
           >
             Sign In
           </Button>
-          <Link href="/some-page" underline="none" color="#4741DE">
-            <Typography variant="body2" sx={sxForgotLinkTypography}>
-              forgot password
-            </Typography>
-          </Link>
+          <CommonLink url="/forgot" text="forgot password" />
         </Box>
-      </Box>
+      </Card>
     </Container>
   );
 }
