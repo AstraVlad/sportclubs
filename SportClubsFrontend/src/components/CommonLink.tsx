@@ -2,6 +2,7 @@ import { Typography, Link } from '@mui/material';
 
 type Approps = {
   url: string;
+  text: string
 };
 
 const sxLinkTypography = {
@@ -11,11 +12,11 @@ const sxLinkTypography = {
   mb: 1,
 };
 
-export default function CommonLink({ url }: Approps) {
+export default function CommonLink({ url, text }: Approps) {
   return (
     <Link underline="none" href={url} color="#4741DE">
       <Typography variant="body2" sx={sxLinkTypography}>
-        sign in
+        {text}
       </Typography>
     </Link>
   );

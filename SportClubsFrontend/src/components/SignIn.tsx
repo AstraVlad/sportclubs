@@ -4,9 +4,10 @@ import {
   Box,
   Typography,
   Container,
-  Link,
   Card
 } from '@mui/material';
+
+import CommonLink from './CommonLink';
 
 const sxCard = {
   boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
@@ -64,11 +65,7 @@ export default function SignIn() {
           >
             Sign In
           </Button>
-          <Link href="/some-page" underline="none" color="#4741DE">
-            <Typography variant="body2" sx={sxForgotLinkTypography}>
-              forgot password
-            </Typography>
-          </Link>
+          <CommonLink url="/forgot" text="forgot password" />
         </Box>
       </Card>
     </Container>

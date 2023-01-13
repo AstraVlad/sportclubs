@@ -60,7 +60,7 @@ export default function ResetForm() {
           >
             send
           </Button>
-          <CommonLink url="/signin"/>
+          <CommonLink url="/signin" text="sign in"/>
         </Box>
       </Card>
     </Container>
