@@ -13,7 +13,7 @@ const theme = createTheme({
 
     },
     shape:{
-        borderRadius: 20
+        borderRadius: 4
 
     },
 })
