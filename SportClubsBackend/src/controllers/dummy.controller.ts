@@ -1,13 +1,13 @@
 
-const dummyController = (req: Express.Request, res: Express.Response) => {
+const dummyController = (req: any, res: any) => {
   res.send(`Dummy responce for ${req.url}`)
 }
 
-const paramsDummyController = (req: Express.Request, res: Express.Response) => {
+const paramsDummyController = (req: any, res: any) => {
   res.send(`Dummy responce for ${req.url} with params ${req.params.id}`)
 }
 
-const queryDummyController = (req: Express.Request, res: Express.Response) => {
+const queryDummyController = (req: any, res: any) => {
   res.send(`Dummy responce for ${req.url} with query ${req.query}`)
 }
 

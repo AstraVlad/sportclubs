@@ -16,15 +16,8 @@ function initDB (adminUsername, adminPassword)
   )");
   
   //console.log("1")
-
-  db.run("CREATE TABLE IF NOT EXISTS todos ( \
-    id INTEGER PRIMARY KEY, \
-    owner_id INTEGER NOT NULL, \
-    title TEXT NOT NULL, \
-    completed INTEGER \
-  )");
-  
-  // create an initial user (username: alice, password: letmein)
+ 
+  // create an initial user
   const salt = crypto.randomBytes(16);
   db.run('INSERT OR IGNORE INTO users (username, hashed_password, salt) VALUES (?, ?, ?)', [
     adminUsername,
@@ -33,10 +26,6 @@ function initDB (adminUsername, adminPassword)
   ]);
 }
 
-/*db.serialize(function() {
-  // create the database schema for the todos app
- 
-});*/
 
 module.exports = {
   db,

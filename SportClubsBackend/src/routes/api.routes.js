@@ -3,6 +3,7 @@ const router = express.Router();
 const { loginController } = require("../controllers/login.controller");
 const {dummyController, paramsDummyController, queryDummyController} = require("../controllers/dummy.controller")
 
+/*
 //Login route, on success refirect to the root
 router.post('/login', loginController.authenticate('local', {
   //successReturnToOrRedirect: '/',
@@ -24,11 +25,10 @@ router.post('/logout', function(req, res, next) {
 router.post('/login/forgot', (req, res) => {
   return res.status(200).send("A message with further instructions has been sent to the mail {HERE WE USE EMAIL FIELD} ")
 }
-
 )
-
+*/
 //GET users list with optional query, not implemented
-router.get('/users', loadedDummyController)
+router.get('/users', paramsDummyController)
 
 router.post('/users', dummyController)
 
