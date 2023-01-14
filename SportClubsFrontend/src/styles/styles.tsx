@@ -12,10 +12,10 @@ const theme = createTheme({
         }
 
     },
-    shape:{
-        borderRadius: 20
+    // shape:{
+    //     borderRadius: 20
 
-    },
+    // },
 })
 
 export default theme
