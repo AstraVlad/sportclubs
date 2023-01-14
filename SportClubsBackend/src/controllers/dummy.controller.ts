@@ -1,13 +1,14 @@
+import { Request, Response } from "express"
 
-const dummyController = (req: any, res: any) => {
+const dummyController = (req: Request, res: Response) => {
   res.send(`Dummy responce for ${req.url}`)
 }
 
-const paramsDummyController = (req: any, res: any) => {
+const paramsDummyController = (req: Request, res: Response) => {
   res.send(`Dummy responce for ${req.url} with params ${req.params.id}`)
 }
 
-const queryDummyController = (req: any, res: any) => {
+const queryDummyController = (req: Request, res: Response) => {
   res.send(`Dummy responce for ${req.url} with query ${req.query}`)
 }
 

@@ -19,6 +19,7 @@ function initDB (adminUsername, adminPassword)
  
   // create an initial user
   const salt = crypto.randomBytes(16);
+  
   db.run('INSERT OR IGNORE INTO users (username, hashed_password, salt) VALUES (?, ?, ?)', [
     adminUsername,
     crypto.pbkdf2Sync(adminPassword, salt, 310000, 32, 'sha256'),
