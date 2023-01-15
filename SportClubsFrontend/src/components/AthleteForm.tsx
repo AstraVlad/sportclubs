@@ -3,6 +3,8 @@ import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 
 import { Button, TextField, Box, Typography } from '@mui/material';
+import theme from '../styles/styles';
+
 
 const sxDialog = {
   style: { 
@@ -22,7 +24,7 @@ export default function AthleteForm() {
         <Typography component="h1" variant="h5" align="center">
           Adding a member
         </Typography>
-        <Typography component="p" align="center" color="#888888">
+        <Typography component="p" align="center" color={theme.palette.grey[600]}>
           Fill in all the fields
         </Typography>
         <TextField
