@@ -11,11 +11,7 @@ const theme = createTheme({
             main: Colors.primary
         }
 
-    },
-    shape:{
-        borderRadius: 4
-
-    },
+    }
 })
 
 export default theme
