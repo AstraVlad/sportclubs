@@ -1,20 +1,21 @@
 import {
-    Button
-  } from '@mui/material';
+  Button,
+} from "@mui/material"
 
-  type Approps ={
-    text: string
+
+  type Approps = {
+    text: string,
   }
   
-  const sxSubmitButton = {
-    mt: 3,
-    mb: 2,
-    letterSpacing: 1.25,
-  };
+const sxSubmitButton = {
+  mt: 3,
+  mb: 2,
+  letterSpacing: 1.25,
+}
 
 export default function CommonButton({text}: Approps){
-    return(
-      <Button
+  return(
+    <Button
       type="submit"
       fullWidth
       variant="contained"
@@ -22,5 +23,5 @@ export default function CommonButton({text}: Approps){
     >
       {text}
     </Button>  
-    )
+  )
 }

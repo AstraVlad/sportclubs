@@ -1,9 +1,9 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import SignIn from './components/SignIn';
-import ResetForm from './components/ResetForm';
-import ClubCreationForm from './components/ClubCreationForm';
+import "./App.css"
+import {Routes, Route} from "react-router-dom"
 
+import ClubCreationForm from "./components/ClubCreationForm"
+import ResetForm from "./components/ResetForm"
+import SignIn from "./components/SignIn"
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/forgot" element={<ResetForm />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,21 +1,21 @@
-import * as React from 'react';
+import * as React from "react"
 
-import Dialog from '@mui/material/Dialog';
+import {Button, TextField, Box, Typography} from "@mui/material"
+import Dialog from "@mui/material/Dialog"
 
-import { Button, TextField, Box, Typography } from '@mui/material';
-import theme from '../styles/styles';
+import theme from "../styles/styles"
 
 
 const sxDialog = {
   style: { 
-    borderRadius: 20 
+    borderRadius: 20, 
+  },
 }
-};
 
 const sxButton = {
   mt: 2,
   mb: 1,
-};
+}
 
 export default function AthleteForm() {
   return (
@@ -65,5 +65,5 @@ export default function AthleteForm() {
         </Button>
       </Box>
     </Dialog>
-  );
+  )
 }

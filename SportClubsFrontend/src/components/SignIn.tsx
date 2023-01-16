@@ -4,31 +4,32 @@ import {
   Box,
   Typography,
   Container,
-  Card
-} from '@mui/material';
+  Card,
+} from "@mui/material"
 
-import CommonLink from './CommonLink';
+import CommonLink from "./CommonLink"
+
 
 const sxCard = {
-  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1)',
-  padding: '25px',
+  boxShadow: "0 4px 16px rgba(0, 0, 0, 0.1)",
+  padding: "25px",
   marginTop: 8,
-};
+}
 
 const sxSubmitButton = {
   mt: 3,
   mb: 2,
-  background: '#4741DE',
+  background: "#4741DE",
   letterSpacing: 1.25,
-};
+}
 
 const sxForgotLinkTypography = {
   fontWeight: 600,
   fontSize: 14,
   letterSpacing: 1.25,
-};
+}
 
-const sxTitleTypography = { letterSpacing: 0.25, fontSize: 34 };
+const sxTitleTypography = {letterSpacing: 0.25, fontSize: 34}
 
 export default function SignIn() {
   return (
@@ -69,5 +70,5 @@ export default function SignIn() {
         </Box>
       </Card>
     </Container>
-  );
+  )
 }
