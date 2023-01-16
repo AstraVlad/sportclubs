@@ -5,7 +5,7 @@ import { db, initDB } from './database/db';
 import session from 'express-session';
 import passport from 'passport';
 
-const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
+//const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 
 dotenv.config();
@@ -14,6 +14,7 @@ const port = process.env.PORT;
 const app: Express = express();
 
 const SQLiteStore = require('connect-sqlite3')(session);
+
 db.serialize(initDB(process.env.ADMINUSERNAME, process.env.ADMINPASSWORD))
 
 app.use(express.json());
@@ -21,8 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
   secret: process.env.SECRET as string | string[],
   resave: false,
+  name: 'session',
   saveUninitialized: false,
-  store: new SQLiteStore({ db: 'sessions.db', dir: '../var/db' }),
+  store: new SQLiteStore({ db: 'sessions.db', dir: './db' }),
 }));
 
 

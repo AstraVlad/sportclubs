@@ -2,9 +2,17 @@ const sqlite3 = require('sqlite3');
 const mkdirp = require('mkdirp');
 const crypto = require('crypto');
 
-mkdirp.sync('../var/db');
+const knex = require('knex')({
+  client: 'sqlite3',
+  connection: {
+    filename: "./db/sportclubs"
+  }
+});
 
-const db = new sqlite3.Database('../var/db/sportclubs.db');
+
+mkdirp.sync('./db');
+
+const db = new sqlite3.Database('./db/sportclubs.db');
 
 function initDB (adminUsername, adminPassword) 
 {
@@ -19,7 +27,7 @@ function initDB (adminUsername, adminPassword)
  
   // create an initial user
   const salt = crypto.randomBytes(16);
-  
+
   db.run('INSERT OR IGNORE INTO users (username, hashed_password, salt) VALUES (?, ?, ?)', [
     adminUsername,
     crypto.pbkdf2Sync(adminPassword, salt, 310000, 32, 'sha256'),

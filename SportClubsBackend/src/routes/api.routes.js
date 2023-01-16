@@ -43,11 +43,11 @@ router.get('/users/:id', redirectNonAuthToLogin, paramsDummyController)
 router.post('/users/:id', redirectNonAuthToLogin, paramsDummyController)
 
 //GET clubs list with optional query, not implemented
-router.get('/clubs', redirectNonAuthToLogin, dummyController)
+router.get('/clubs', dummyController)
 
 router.post('/clubs', redirectNonAuthToLogin, dummyController)
 
-router.get('/clubs/:id', redirectNonAuthToLogin, paramsDummyController)
+router.get('/clubs/:id', paramsDummyController)
 
 router.post('/clubs/:id', redirectNonAuthToLogin, paramsDummyController)
 
