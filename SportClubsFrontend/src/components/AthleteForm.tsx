@@ -1,32 +1,16 @@
-import * as React from 'react';
-
 import Dialog from '@mui/material/Dialog';
-
-import { Button, TextField, Box, Typography } from '@mui/material';
-import theme from '../styles/styles';
-
-
-const sxDialog = {
-  style: { 
-    borderRadius: 20 
-}
-};
-
-const sxButton = {
-  mt: 2,
-  mb: 1,
-};
+import { TextField, Box, Typography } from '@mui/material';
+import ButtonForm from './modalFormComponents/ButtonForm';
+import { sxDialog } from '../styles/modalStyles';
+import Title from './modalFormComponents/Title';
+import Subtitle from './modalFormComponents/Subtitle';
 
 export default function AthleteForm() {
   return (
     <Dialog open={true} maxWidth="xs" PaperProps={sxDialog}>
       <Box m={2} component="form">
-        <Typography component="h1" variant="h5" align="center">
-          Adding a member
-        </Typography>
-        <Typography component="p" align="center" color={theme.palette.grey[600]}>
-          Fill in all the fields
-        </Typography>
+        <Title text="Adding a member" />
+        <Subtitle text="Fill in all the fields" />
         <TextField
           size="small"
           margin="normal"
@@ -60,9 +44,7 @@ export default function AthleteForm() {
           name="email"
           autoComplete="email"
         />
-        <Button type="submit" fullWidth variant="contained" sx={sxButton}>
-          send
-        </Button>
+        <ButtonForm text="next" />
       </Box>
     </Dialog>
   );
