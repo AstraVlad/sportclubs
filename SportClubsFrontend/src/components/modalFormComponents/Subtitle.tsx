@@ -9,7 +9,7 @@ type Approps = {
 
 export default function Subtitle({text}: Approps) {
   return (
-    <Typography component="p" align="center" color={theme.palette.grey[600]}>
+    <Typography component="p" align="center" color={theme.palette.grey[600]} >
       {text} 
     </Typography>
   )
