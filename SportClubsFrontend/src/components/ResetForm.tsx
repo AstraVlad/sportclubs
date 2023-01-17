@@ -26,5 +26,5 @@ export default function ResetForm() {
         </Box>
       </Card>
     </Container>
-  );
+  )
 }

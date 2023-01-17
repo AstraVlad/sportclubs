@@ -1,13 +1,15 @@
-import { Dialog, TextField, Box } from '@mui/material';
-import Title from './modalFormComponents/Title';
-import Subtitle from './modalFormComponents/Subtitle';
-import ButtonForm from './modalFormComponents/ButtonForm';
+import {Dialog, TextField, Box} from "@mui/material"
+
+import ButtonForm from "./modalFormComponents/ButtonForm"
+import Subtitle from "./modalFormComponents/Subtitle"
+import Title from "./modalFormComponents/Title"
+
 
 const sxDialog = {
   style: {
     borderRadius: 20,
   },
-};
+}
 
 export default function AthleteForm() {
   return (
@@ -26,5 +28,5 @@ export default function AthleteForm() {
         <ButtonForm text="add member" />
       </Box>
     </Dialog>
-  );
+  )
 }

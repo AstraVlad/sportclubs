@@ -47,5 +47,5 @@ export default function AthleteForm() {
         <ButtonForm text="next" />
       </Box>
     </Dialog>
-  );
+  )
 }

@@ -11,7 +11,7 @@ function App() {
         <Route path="/forgot" element={<ResetForm />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
