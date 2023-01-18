@@ -10,8 +10,10 @@ export default function MainWrapper({ children }: WrapperProps) {
     return (
         <div className='Wrapper'>
             <PageHeader />
-            <NavBar />
-            {children}
+            <div className='InnerWrapper'>
+                <NavBar />
+                {children}
+            </div>
         </div>
     )
 }
