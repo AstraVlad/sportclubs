@@ -1,19 +1,30 @@
 const sqlite3 = require('sqlite3');
-const mkdirp = require('mkdirp');
+const {mkdirp} = require('mkdirp');
 const crypto = require('crypto');
+const dbPath='./db'
+const dbFileName = '/sportclubs.db'
 
+console.log("Require Knex")
 const knex = require('knex')({
   client: 'sqlite3',
   connection: {
-    filename: "./db/sportclubs"
+    filename: dbPath + dbFileName
   }
 });
 
+console.log("Users query")
+knex('users').select('*').then((users)=>console.log(users))
 
-mkdirp.sync('./db');
 
-const db = new sqlite3.Database('./db/sportclubs.db');
+const made = mkdirp.sync(dbPath)
+console.log(`Made: ${made}`)
 
+//console.log("Making dir: " + mkdirp.sync('../var/db'));
+
+console.log("Making DB")
+const db = new sqlite3.Database(dbPath + dbFileName);
+
+console.log("Init DB Declaration")
 function initDB (adminUsername, adminPassword) 
 {
   db.run("CREATE TABLE IF NOT EXISTS users ( \
@@ -23,7 +34,7 @@ function initDB (adminUsername, adminPassword)
     salt BLOB \
   )");
   
-  //console.log("1")
+  console.log("DB.Run Declaration")
  
   // create an initial user
   const salt = crypto.randomBytes(16);
@@ -37,6 +48,7 @@ function initDB (adminUsername, adminPassword)
 
 
 module.exports = {
+  dbPath,
   db,
   initDB
 };

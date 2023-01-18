@@ -1,5 +1,4 @@
 const path = require('path');
-// Update with your config settings.
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -9,7 +8,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: path.join(__dirname, 'db.sqlite3')
+      filename: path.join(__dirname, 'db/sportclubs.db')
     },
     migrations: {
       tableName: 'knex_migrations'

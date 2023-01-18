@@ -34,7 +34,7 @@ router.post('/login/forgot', (req, res) => {
 )
 
 //GET users list with optional query, not implemented
-router.get('/users', redirectNonAuthToLogin, paramsDummyController)
+router.get('/users', paramsDummyController)
 
 router.post('/users', redirectNonAuthToLogin, dummyController)
 
