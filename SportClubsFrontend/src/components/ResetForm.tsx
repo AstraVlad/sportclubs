@@ -1,9 +1,12 @@
-import { TextField, Box, Container, Card } from '@mui/material';
-import CommonLink from './modalFormComponents/CommonLink';
-import { sxCard } from '../styles/modalStyles';
-import Title from './modalFormComponents/Title';
-import Subtitle from './modalFormComponents/Subtitle';
-import ButtonForm from './modalFormComponents/ButtonForm';
+import {TextField, Box, Container, Card} from "@mui/material"
+
+import {sxCard} from "../styles/modalStyles"
+
+import ButtonForm from "./modalFormComponents/ButtonForm"
+import CommonLink from "./modalFormComponents/CommonLink"
+import Subtitle from "./modalFormComponents/Subtitle"
+import Title from "./modalFormComponents/Title"
+
 
 export default function ResetForm() {
   return (

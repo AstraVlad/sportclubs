@@ -1,9 +1,12 @@
-import Dialog from '@mui/material/Dialog';
-import { TextField, Box, Typography } from '@mui/material';
-import ButtonForm from './modalFormComponents/ButtonForm';
-import { sxDialog } from '../styles/modalStyles';
-import Title from './modalFormComponents/Title';
-import Subtitle from './modalFormComponents/Subtitle';
+import {TextField, Box, Typography} from "@mui/material"
+import Dialog from "@mui/material/Dialog"
+
+import {sxDialog} from "../styles/modalStyles"
+
+import ButtonForm from "./modalFormComponents/ButtonForm"
+import Subtitle from "./modalFormComponents/Subtitle"
+import Title from "./modalFormComponents/Title"
+
 
 export default function AthleteForm() {
   return (

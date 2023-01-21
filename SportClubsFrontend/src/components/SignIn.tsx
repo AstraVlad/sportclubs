@@ -1,8 +1,11 @@
-import { TextField, Box, Container, Card } from '@mui/material';
-import ButtonForm from './modalFormComponents/ButtonForm';
-import CommonLink from './modalFormComponents/CommonLink';
-import Title from './modalFormComponents/Title';
-import {sxCard} from '../styles/modalStyles';
+import {TextField, Box, Container, Card} from "@mui/material"
+
+import {sxCard} from "../styles/modalStyles"
+
+import ButtonForm from "./modalFormComponents/ButtonForm"
+import CommonLink from "./modalFormComponents/CommonLink"
+import Title from "./modalFormComponents/Title"
+
 
 export default function SignIn() {
   return (
