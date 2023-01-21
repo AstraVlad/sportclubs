@@ -1,8 +1,10 @@
-import './App.css'
-import {Routes, Route} from 'react-router-dom';
-import SignIn from './components/SignIn'
-import ResetForm from './components/ResetForm';
-import { Counter } from './features/counter/Counter';
+import "./App.css"
+import {Routes, Route} from "react-router-dom"
+
+import ResetForm from "./components/ResetForm"
+import SignIn from "./components/SignIn"
+import {Counter} from "./features/counter/Counter"
+
 
 function App() {
   return (
