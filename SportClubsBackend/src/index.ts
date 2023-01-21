@@ -1,14 +1,14 @@
-import express from 'express'
-const forgotRouter = require('./routes/forgot')
+import express from 'express';
+const bodyParser = require('body-parser');
+const forgotRouter = require('./routes/forgot');
 
-const app = express()
+const app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api/forgot', forgotRouter)
+app.use('/api', forgotRouter);
 
-
-
-
-app.listen(3000, ()=> {
-    console.log("Application listening at http://localhost:3000")
-})
+app.listen(3000, () => {
+  console.log('Application listening at http://localhost:3000');
+});
