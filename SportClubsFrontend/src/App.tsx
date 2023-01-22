@@ -1,16 +1,31 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import SignIn from './components/SignIn';
-import ResetForm from './components/ResetForm';
+import MainWrapper from './components/MainWrapper';
+import { loginRoutes, mainAppRoutes } from './routes';
 
-function App() {
+function App() {  
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/forgot" element={<ResetForm />} />
-      </Routes>
-    </div>
+    <Routes>    
+      {loginRoutes.map((entry, i) => {
+          return (
+            <Route key={i} path={entry.path} element={(
+              <div className="App">
+                <entry.component />
+              </div>
+            )}/>             
+          );
+      })}
+
+      {mainAppRoutes.map((entry, i) => {
+          return (
+            <Route key={i} path={entry.path} element={(
+              <MainWrapper>
+                <entry.component />
+              </MainWrapper>
+            )}/>
+          );
+      })}
+    </Routes>
   )
 }
 
